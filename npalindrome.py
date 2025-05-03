@@ -1,6 +1,5 @@
 # This is a problem my math teacher gave me
 
-
 from math import floor, inf
 
 
