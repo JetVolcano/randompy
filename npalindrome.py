@@ -1,18 +1,21 @@
 # This is a problem my math teacher gave me
 
-from math import floor, isinf
+from math import isinf
 
-
-def numberpalindromes(digits: int) -> float | str | None:
-  if digits == 0:
-    return None
-  if digits < 0:
-    digits = abs(digits)
-  result: float = float(f"9e+{(digits+1)//2-1}") 
-  if isinf(result) == False:
-    return result
-  if isinf(result):
-    return f"9e+{(digits+1//2)-1}"
-  
-
-print(numberpalindromes(9043454676543567865467865467545678654565786545675467534567876546545657865456754675345676545657865456754675345676545657865456754675345676545657865456754675345676545657865456754675345676545657865456754675345676545657865456754675345676545657865456754675345676545657865456754675345676545657865456754675345676545657865456754675345676545657865456754675345675678656787656786546787765467865456786545467876545678654567543565445676545676544564345641234567876543234567876543456765432456787654356543245324532454345643564354564565465456464353543245))
+class NP():
+  def __init__(self, digits: int, print_at_start: bool = False) -> None:
+    self.result: float | str
+    result: str = f"9e{(digits+1)//2-1}"
+    if digits == 0:
+      self.result = None
+    if digits < 0:
+      digits = abs(digits)
+    if isinf(float(result)):
+      self.result = result
+    if isinf(float(result)) == False:
+      self.result = float(result)
+    if print_at_start == True:
+      print(result)
+    
+    
+NP(9076545676543456523456786545676532456786543567543567546754675435675467546234567898765456786567655543456543213454567887654567, True)
