@@ -10,8 +10,6 @@ def numberpalindromes(digits: int) -> float | str | None:
     digits = abs(digits)
   result: float = float(f"9e+{floor((digits+1)/2)-1}") 
   if isinf(result) == False:
-    return float(f"9e+{floor((digits+1)/2)-1}")
+    return result
   if isinf(result):
     return f"9e+{floor((digits+1)/2)-1}"
-
-print(numberpalindromes(0))
